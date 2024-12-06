@@ -1,0 +1,178 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #2E7D32;
+    --accent-color: #81C784;
+    --background-color: #F1F8E9;
+    --text-color: #1B5E20;
+    --border-color: #A5D6A7;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url('grass.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color);
+}
+
+header {
+    background-color: rgba(76, 175, 80, 0.88);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.3s ease;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+nav {
+    background-color: rgba(46, 125, 50, 0.88);
+    padding: 1rem 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: var(--hover-transition);
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+section h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -10px;
+    left: 25%;
+    background-color: var(--accent-color);
+}
+
+section h2:hover::after {
+    width: 100%;
+}
+
+.service-box {
+    background-color: rgba(241, 248, 233, 0.88);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+}
+
+.service-box h3 {
+    color: var(--primary-color);
+}
+
+#contact p {
+    margin: 0.5rem 0;
+}
+
+
+/* Credit button styles */
+
+.credit-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+    background-color: rgba(76, 175, 80, 0.9);
+    /* Green with transparency */
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    opacity: .9;
+    /* Set opacity to make it transparent */
+    transition: .3s ease;
+    /* Smooth transition for hover effect */
+}
+
+
+/* Link styles within the button */
+
+.credit-button a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Hover effect for the credit button */
+
+.credit-button:hover {
+    opacity: .7;
+    /* Slightly more transparent on hover */
+}
+
+
+/* Responsive styles */
+
+@media (max-width:768px) {
+    nav ul {
+        flex-direction: center;
+        align-items: center;
+        gap: .5rem;
+    }
+    section {
+        padding: .5rem;
+    }
+    section h2 {
+        font-size: .8rem;
+    }
+}
